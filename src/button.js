@@ -44,7 +44,7 @@ class Button extends Component {
         );
     }
 
-    handleClick(event) {
+    _handleClick(event) {
         this.props.onClick && this.props.onClick(event);
     }
 
@@ -54,7 +54,7 @@ class Button extends Component {
             disabled = (this.props.disabled || this.props.loading) ? true : false;
 
         return (
-            <Node className={classNames} disabled={disabled} onClick={this.handleClick.bind(this)} type={this.props.buttonType}>
+            <Node className={classNames} disabled={disabled} onClick={this._handleClick.bind(this)} type={this.props.buttonType}>
                 {this.props.children}
             </Node>
         );
