@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Button from '../src/button.js';
 
-class Example extends Component {
+export default class Example extends Component {
     Cn() {
         alert('你点击了按钮');
     }
@@ -17,5 +17,3 @@ class Example extends Component {
         );
     }
 }
-
-ReactDOM.render(<Example />, document.getElementById('component-example-event')); 

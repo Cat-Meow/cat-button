@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Button from '../src/button.js';
 
-class Example extends Component {
+export default class Example extends Component {
 
     render() {
         return (
@@ -26,5 +26,3 @@ class Example extends Component {
         );
     }
 }
-
-ReactDOM.render(<Example />, document.getElementById('component-example-style')); 
