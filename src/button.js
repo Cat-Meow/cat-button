@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { setClass } from 'cat-util';
+import { setClass } from 'rs-util';
 
 const SIZES = {
     'large': 'lg',
@@ -67,7 +67,7 @@ class Button extends Component {
                 [`btn-${SIZES[mySize]}`]: mySize !== 'medium',
                 'btn-block': block,
                 'btn-active': active,
-                'cat-loading-btn': loading,
+                'salt-loading-btn': loading,
                 'disabled': disabled
             }, className);
 
