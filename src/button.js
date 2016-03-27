@@ -10,15 +10,27 @@ const SIZES = {
 
 class Button extends Component {
     static propTypes = {
-        myStyle: React.PropTypes.string,    //风格
-        mySize: React.PropTypes.string,     //大小
+        myStyle: React.PropTypes.oneOf([
+            'default',
+            'primary',
+            'success',
+            'danger',
+            'info',
+            'warning',
+            'link'
+        ]),
+        mySize: React.PropTypes.oneOf([
+            'large',
+            'medium',
+            'small',
+            'xsmall'
+        ]),
         className: React.PropTypes.string,  //自定义组件类名
         block: React.PropTypes.bool,    //块级风格
         componentClass: React.PropTypes.string,     //自定义标签类型
         active: React.PropTypes.bool,
         disabled: React.PropTypes.bool,
-        loading: React.PropTypes.bool,
-        buttonType: React.PropTypes.string
+        loading: React.PropTypes.bool
     }
 
     static defaultProps = {
@@ -28,8 +40,7 @@ class Button extends Component {
         block: false,
         active: false,
         disabled: false,
-        loading: false,
-        buttonType: 'button'
+        loading: false
     }
 
     constructor(props) {
@@ -43,7 +54,7 @@ class Button extends Component {
             { href, target } = this.props;
 
         return (
-            <Node href={href ? href : '#'} target={target ? target : '_blank'} className={classNames}>
+            <Node {...this.props } href={href ? href : '#'} target={target ? target : '_blank'} className={classNames}>
                 {this.props.children}
             </Node>
         );
@@ -59,7 +70,7 @@ class Button extends Component {
             disabled = (this.props.disabled || this.props.loading) ? true : false;
 
         return (
-            <Node className={classNames} disabled={disabled} onClick={this.handleClick} type={this.props.buttonType}>
+            <Node {...this.props} className={classNames} disabled={disabled} onClick={this.handleClick} >
                 {this.props.children}
             </Node>
         );
