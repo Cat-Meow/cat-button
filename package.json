@@ -1,6 +1,6 @@
 {
   "name": "rs-button",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "./dist/button.js",
   "scripts": {
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "react-dom": "^0.14.x",
-    "rs-server": "^0.1.1"
+    "rs-server": "^0.1.1",
+    "rs-ui-core": "^0.1.0"
   }
 }

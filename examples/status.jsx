@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Button from '../src/button.js';
+import '../assets/index.less';
 
 export default class Example extends Component {
+    constructor(props) {
+        super(props);
+        this.onClick = this.onClick.bind(this);
+    }
+
     state = {
         loading: true
     }
 
-    Cn() {
+    onClick() {
         alert('你点击了按钮');
         this.setState({
             loading: !this.state.loading
@@ -17,11 +22,11 @@ export default class Example extends Component {
     render() {
         return (
             <div>
-                <Button active onClick={this::this.Cn}>Active</Button>
-                <Button disabled onClick={this::this.Cn}>Disabled Button</Button>
-                <Button loading={this.state.loading} onClick={this::this.Cn}>Loading</Button>
+                <Button active onClick={this.onClick}>Active</Button>
+                <Button disabled onClick={this.onClick}>Disabled Button</Button>
+                <Button loading={this.state.loading} onClick={this.onClick}>Loading</Button>
                 <hr/>
-                <Button disabled href="https://github.com/MYFE-React-Component">Disabled Link</Button>
+                <Button disabled href="https://github.com/react-salt">Disabled Link</Button>
             </div>
         );
     }

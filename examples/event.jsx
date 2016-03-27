@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Button from '../src/button.js';
 
 export default class Example extends Component {
@@ -10,7 +9,7 @@ export default class Example extends Component {
     render() {
         return (
             <div>
-                <Button block onClick={this::this.Cn}>
+                <Button onClick={this::this.Cn}>
                     Click
                 </Button>
             </div>

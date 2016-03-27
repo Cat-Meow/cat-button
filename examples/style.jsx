@@ -20,8 +20,8 @@ export default class Example extends Component {
                 <hr />
 
                 <Button myStyle="link">Link liked Button</Button>
-                <Button href="https://github.com/MYFE-React-Component">Button liked Link</Button>
-                <Button href="https://github.com/MYFE-React-Component" myStyle="link">Link liked Link</Button>
+                <Button href="https://github.com/react-salt">Button liked Link</Button>
+                <Button href="https://github.com/react-salt" myStyle="link">Link liked Link</Button>
             </div>
         );
     }

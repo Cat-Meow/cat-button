@@ -1,0 +1,49 @@
+.@{prefixName}-loading-btn {
+    padding-left: 3 * @padding-base-horizontal;
+    &:before {
+        content: "\e031";
+        margin-left: -2 * @padding-base-horizontal;
+        margin-right: @padding-base-horizontal;
+        -webkit-animation: btnloading 1s linear infinite;
+        animation: btnloading 1s linear infinite;
+    }
+    &.btn-lg {
+        padding-left: 3 * @padding-large-horizontal;
+        &:before {
+            margin-left: -2 * @padding-large-horizontal;
+            margin-right: @padding-large-horizontal;
+        }
+    }
+    &.btn-sm {
+        padding-left: 3 * @padding-small-horizontal;
+        &:before {
+            margin-left: -2 * @padding-small-horizontal;
+            margin-right: @padding-small-horizontal;
+        }
+    }
+    &.btn-xs {
+        padding-left: 3 * @padding-xs-horizontal;
+        &:before {
+            margin-left: -2 * @padding-xs-horizontal;
+            margin-right: @padding-xs-horizontal;
+        }
+    }
+}
+
+@-webkit-keyframes btnloading {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes btnloading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

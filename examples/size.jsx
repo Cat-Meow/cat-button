@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import Button from '../src/button.js';
 
-export default class Example extends Component {
-    render() {
-        return (
-            <div>
-                <Button mySize="large">Large</Button>
-                <Button>Medium</Button>
-                <Button mySize="small">Small</Button>
-                <Button mySize="xsmall">Xsmall</Button>
+let Example = function(props) {
+    return (
+        <div>
+            <Button mySize="large">Large</Button>
+            <Button>Medium</Button>
+            <Button mySize="small">Small</Button>
+            <Button mySize="xsmall">Xsmall</Button>
 
-                <hr />
+            <hr />
 
-                <Button block>Block</Button>
-            </div>
-        );
-    }
+            <Button block>Block</Button>
+        </div>
+    
+    );
 }
+
+export default Example;

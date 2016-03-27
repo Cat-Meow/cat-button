@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { setClass } from 'rs-util';
 
 const SIZES = {
@@ -32,8 +32,13 @@ class Button extends Component {
         buttonType: 'button'
     }
 
+    constructor(props) {
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
     // render链接
-    _renderLink(classNames) {
+    renderLink(classNames) {
         let Node = this.props.componentClass || 'a',
             { href, target } = this.props;
 
@@ -44,24 +49,24 @@ class Button extends Component {
         );
     }
 
-    _handleClick(event) {
+    handleClick(event) {
         this.props.onClick && this.props.onClick(event);
     }
 
     // render按钮
-    _renderButton(classNames) {
+    renderButton(classNames) {
         let Node = this.props.componentClass || 'button',
             disabled = (this.props.disabled || this.props.loading) ? true : false;
 
         return (
-            <Node className={classNames} disabled={disabled} onClick={this._handleClick.bind(this)} type={this.props.buttonType}>
+            <Node className={classNames} disabled={disabled} onClick={this.handleClick} type={this.props.buttonType}>
                 {this.props.children}
             </Node>
         );
     }
 
     render() {
-        let renderer = this.props.href || this.props.target ? '_renderLink' : '_renderButton',
+        let renderer = this.props.href || this.props.target ? 'renderLink' : 'renderButton',
             { className, myStyle, mySize, block, active, disabled, loading } = this.props,
             classNames = setClass('btn', `btn-${myStyle}`, {
                 [`btn-${SIZES[mySize]}`]: mySize !== 'medium',
