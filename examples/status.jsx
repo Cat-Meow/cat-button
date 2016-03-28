@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Button from '../src/button.js';
-import '../assets/index.less';
 
 export default class Example extends Component {
     constructor(props) {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Button from '../src/button.js';
 
 export default class Example extends Component {
