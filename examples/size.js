@@ -1,6 +1,9 @@
 import React from 'react';
 import Button from '../src/button.js';
 
+/*
+*   与大小相关的属性为mySize，有large\mediun\small\xsmall这几个值
+*/
 let Example = function(props) {
     return (
         <div>

@@ -1,8 +1,8 @@
 {
   "name": "rs-button",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "",
-  "main": "./dist/button.js",
+  "main": "./lib/button.js",
   "scripts": {
     "dev": "node node_modules/.bin/rs-server",
     "pre-publish": "node node_modules/.bin/pre-publish"
@@ -11,9 +11,9 @@
   "license": "MIT",
   "files": [
     "assets/",
-    "dist/",
+    "lib/",
     "examples/",
-    "src/"
+    "src/*.js"
   ],
   "dependencies": {
     "react": "^0.14.x",
